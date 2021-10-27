@@ -24,5 +24,7 @@ text_for_mod_kick = new_message({'ru': 'Пользователь {USERNAME} не
                                  'eng': 'Member {USERNAME} cannot to be kicked because he is moderator'})
 text_for_mod_ban = new_message({'ru': 'Пользователь {USERNAME} не может быть кикнут так как он модератор',
                                 'eng': 'Member {USERNAME} cannot to be kicked because he is moderator'})
+text_for_mod_mute = new_message({'ru': 'Пользователь {USERNAME} не может быть замутен так как он модератор',
+                                'eng': 'Member {USERNAME} cannot to be muted because he is moderator'})
 
 text_on_ready = new_message({'ru': 'Подключен!', 'eng': 'Joined!'})
