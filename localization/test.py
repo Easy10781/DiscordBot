@@ -8,6 +8,7 @@ class LocalizationTest(unittest.TestCase):
     def test_ru(self):
         """
         Tests a ru localization
+        Ru localization test
         """
         utils.set_language('ru')
         # Пользователь {USERNAME} был успешно забанен модератором {MOD_USERNAME} за {REASON}
@@ -34,6 +35,10 @@ class LocalizationTest(unittest.TestCase):
         self.assertEqual("Подключен!", text_on_ready.render())
 
     def test_eng(self):
+        """
+        Eng localization test
+        """
+
         utils.set_language('eng')
         # Member {USERNAME} was banned by {MOD_USERNAME} moderator. Reason: {REASON}
         self.assertEqual("Member test_ was banned by test__ moderator. Reason: test___",
@@ -57,6 +62,18 @@ class LocalizationTest(unittest.TestCase):
 
         # Joined!
         self.assertEqual("Joined!", text_on_ready.render())
+
+        # 'Member {USERNAME} cannot to be kicked because he is moderator'
+        self.assertEqual("Member test_ cannot to be kicked because he is moderator",
+                         text_for_mod_kick.render(USERNAME='test_'))
+
+        # Member {USERNAME} cannot to be banned because he is moderator
+        self.assertEqual("Member test_ cannot to be banned because he is moderator",
+                         text_for_mod_ban.render(USERNAME='test_'))
+
+        # Member {USERNAME} cannot to be muted because he is moderator
+        self.assertEqual("Member test_ cannot to be muted because he is moderator",
+                         text_for_mod_mute.render(USERNAME='test_'))
 
 
 if __name__ == '__main__':
