@@ -17,3 +17,5 @@ async def print_embed(ctx: commands.Context, title, description, r_color, g_colo
     color = discord.Colour.from_rgb(int(r_color), int(g_color), int(b_color))
     embed = discord.Embed(title=title, description=description, color=color)
     await ctx.channel.send(embed=embed)
+
+#
