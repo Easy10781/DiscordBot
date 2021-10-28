@@ -42,7 +42,6 @@ def set_language(lang):
     Sets a localization language
 
     :param lang:
-    :return:
     """
     for _lang in _data.messages:
         _lang.default_lang = lang
@@ -54,7 +53,7 @@ def get_client():
     If client not found in class _Data
     this function returns None
 
-    :return Bot | None:
+    :return Bot:
     """
     return _data.client
 
@@ -81,7 +80,7 @@ def new_message(msg) -> Message:
     Creates a new message object and saves into a class _Data
 
     :param msg:
-    :returns Message:
+    :return Message:
     """
     _msg = Message(msg)
     _data.messages.append(_msg)
