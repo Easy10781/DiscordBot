@@ -87,4 +87,3 @@ def new_message(msg) -> Message:
     _data.messages.append(_msg)
 
     return _msg
-#

@@ -31,4 +31,3 @@ text_for_not_muted_unmuting = new_message({'ru': 'Пользователь {USER
                                            'eng': 'Member {USERNAME} not muted '})
 
 text_on_ready = new_message({'ru': 'Подключен!', 'eng': 'Joined!'})
-#
