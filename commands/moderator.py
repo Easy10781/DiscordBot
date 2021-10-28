@@ -12,6 +12,7 @@ bot = utils.get_client()
 guild: discord.Guild = bot.get_guild(894404289160691772)
 roles: list[discord.Role] = [discord.utils.get(guild.roles, id=894405176604115044)]
 mod_role: discord.Role = discord.utils.get(guild.roles, id=894405176604115044)
+mute_role: discord.Role = discord.utils.get(guild.roles, id=894405176604115044)
 
 
 @bot.command()
@@ -80,6 +81,9 @@ async def unmute(ctx: commands.Context, username, reason):
     member: discord.Member = discord.utils.get(guild.members, nick=username)
     if not member:
         await ctx.channel.send(text_for_not_found.render(USERNAME=username))
-        return None
+        return
+    elif mute_role in member.roles:
+        await ctx.channel.send(text_for_not_found)
+        return
     await ctx.channel.send(text_for_unban.render(USERNAME=username, MOD_USERNAME=ctx.author.name, REASON=reason))
     await member.remove_roles(discord.utils.get(guild.roles, id=895116019071340554))
