@@ -18,4 +18,4 @@ async def on_ready():
     utils.init_commands()
 
 
-client.run("ODk0OTIxNzEyNzI5MjE5MTc4.YVxCyw.zfNGwIdMo6h0LIU-p9_eU-swU_E")
+# client.run(YOUR TOKEN)
