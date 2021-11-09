@@ -11,11 +11,6 @@ intents = discord.Intents(messages=True, guilds=True, members=True)
 client = discord.ext.commands.Bot(command_prefix='.', intents=intents)
 utils.init_client(client)
 
-try:
-    asd
-except:
-    print('asd')
-    traceback.print_exc()
 
 @client.event
 async def on_ready():
